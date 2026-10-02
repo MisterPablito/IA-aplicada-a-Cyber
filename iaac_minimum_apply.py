@@ -8,7 +8,7 @@ from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-from sklearn.model_selection import StratifiedKFold, cross_validate, train_test_split
+from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold, cross_validate, train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
@@ -95,7 +95,29 @@ def main():
             f"accuracy={result['accuracy']:.4f}"
         )
     selected_model = comparison[0]["model"]
-    print("Candidato selecionado para avaliacao posterior:", selected_model)
+    selected_score = comparison[0]["macro_f1"]
+
+    tree_pipeline = Pipeline([
+        ("preprocessor", preprocessor),
+        ("classifier", DecisionTreeClassifier(random_state=SEED)),
+    ])
+    search = RandomizedSearchCV(
+        tree_pipeline,
+        {
+            "classifier__max_depth": [4, 6, 8, 12, 16, None],
+            "classifier__min_samples_leaf": [1, 2, 5, 10, 20],
+            "classifier__criterion": ["gini", "entropy", "log_loss"],
+        },
+        n_iter=12, scoring="f1_macro", cv=folds, random_state=SEED, n_jobs=1,
+    )
+    search.fit(train_features, train_labels)
+    print("Melhor arvore ajustada (CV):", f"{search.best_score_:.4f}", search.best_params_)
+
+    if search.best_score_ > selected_score:
+        selected_model = "Arvore de decisao ajustada"
+        selected_score = search.best_score_
+    print("Modelo selecionado apenas com dados de treino:", selected_model)
+    print("Macro-F1 CV selecionado:", f"{selected_score:.4f}")
 
 
 if __name__ == "__main__":
