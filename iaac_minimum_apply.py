@@ -1,18 +1,31 @@
 """Preparacao inicial do dataset de ataques ciberneticos."""
+import json
 from pathlib import Path
 import sys
 
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
+from joblib import dump
 from sklearn.compose import ColumnTransformer
 from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import (
+    ConfusionMatrixDisplay,
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    f1_score,
+    roc_auc_score,
+    roc_curve,
+    auc as area_under_curve,
+)
 from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold, cross_validate, train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler, label_binarize
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 
@@ -39,7 +52,8 @@ def main():
     print("Duplicados removidos:", duplicate_count)
 
     features = data.drop(columns=TARGET)
-    labels = LabelEncoder().fit_transform(data[TARGET])
+    label_encoder = LabelEncoder()
+    labels = label_encoder.fit_transform(data[TARGET])
     numeric_columns = features.select_dtypes(include="number").columns.tolist()
     categorical_columns = features.select_dtypes(exclude="number").columns.tolist()
     encoder = OneHotEncoder(handle_unknown="ignore", sparse_output=False)
@@ -118,6 +132,101 @@ def main():
         selected_score = search.best_score_
     print("Modelo selecionado apenas com dados de treino:", selected_model)
     print("Macro-F1 CV selecionado:", f"{selected_score:.4f}")
+
+    if selected_model == "Arvore de decisao ajustada":
+        final_pipeline = search.best_estimator_
+    else:
+        final_pipeline = Pipeline([
+            ("preprocessor", preprocessor),
+            ("classifier", models[selected_model]),
+        ])
+    final_pipeline.fit(train_features, train_labels)
+    train_predictions = final_pipeline.predict(train_features)
+    test_predictions = final_pipeline.predict(test_features)
+    train_f1 = f1_score(train_labels, train_predictions, average="macro")
+    test_f1 = f1_score(test_labels, test_predictions, average="macro")
+    test_accuracy = accuracy_score(test_labels, test_predictions)
+    class_report = classification_report(
+        test_labels, test_predictions,
+        labels=range(len(label_encoder.classes_)),
+        target_names=label_encoder.classes_.astype(str),
+        output_dict=True,
+    )
+    print("\nAvaliacao no teste retido:")
+    print(f"Accuracy={test_accuracy:.4f}; macro-F1={test_f1:.4f}; treino={train_f1:.4f}")
+    print(classification_report(
+        test_labels, test_predictions,
+        labels=range(len(label_encoder.classes_)),
+        target_names=label_encoder.classes_.astype(str),
+        digits=4,
+    ))
+
+    prediction_scores = final_pipeline.predict_proba(test_features)
+    test_auc = roc_auc_score(
+        test_labels, prediction_scores, multi_class="ovr", average="macro",
+        labels=range(len(label_encoder.classes_)),
+    )
+    output_dir = Path(__file__).resolve().parent / "resultados"
+    graphics_dir = output_dir / "graficos"
+    graphics_dir.mkdir(parents=True, exist_ok=True)
+    dump(final_pipeline, output_dir / "modelo_final.joblib")
+
+    matrix = confusion_matrix(test_labels, test_predictions)
+    figure, axis = plt.subplots(figsize=(7, 6))
+    ConfusionMatrixDisplay(matrix, display_labels=label_encoder.classes_).plot(
+        ax=axis, cmap="Blues", values_format="d", colorbar=False,
+    )
+    figure.tight_layout()
+    figure.savefig(graphics_dir / "matriz_confusao_teste.png", dpi=160)
+    plt.close(figure)
+
+    figure, axes = plt.subplots(1, 2, figsize=(15, 6))
+    axes[0].bar(
+        [result["model"] for result in comparison],
+        [result["macro_f1"] for result in comparison],
+        color="#3977a8",
+    )
+    axes[0].set_title("Macro-F1 na validacao cruzada")
+    axes[0].tick_params(axis="x", rotation=55)
+    binary_labels = label_binarize(test_labels, classes=np.arange(len(label_encoder.classes_)))
+    for index, class_name in enumerate(label_encoder.classes_):
+        false_positive_rate, true_positive_rate, _ = roc_curve(
+            binary_labels[:, index], prediction_scores[:, index],
+        )
+        axes[1].plot(
+            false_positive_rate, true_positive_rate,
+            label=f"{class_name} (AUC={area_under_curve(false_positive_rate, true_positive_rate):.3f})",
+        )
+    axes[1].plot([0, 1], [0, 1], linestyle="--", color="grey")
+    axes[1].legend(loc="lower right", fontsize=8)
+    axes[1].set(title="ROC one-vs-rest no teste", xlabel="False Positive Rate", ylabel="True Positive Rate")
+    figure.tight_layout()
+    figure.savefig(graphics_dir / "comparacao_e_roc.png", dpi=160)
+    plt.close(figure)
+
+    summary = {
+        "modelo_final": selected_model,
+        "macro_f1_cv": float(selected_score),
+        "accuracy_teste": float(test_accuracy),
+        "macro_f1_teste": float(test_f1),
+        "roc_auc_ovr_macro_teste": float(test_auc),
+        "linhas_apos_deduplicacao": int(len(data)),
+        "linhas_duplicadas_removidas": duplicate_count,
+        "classes": label_encoder.classes_.tolist(),
+        "cv_comparison": comparison,
+        "per_class_metrics": {
+            name: {
+                metric: float(class_report[name][metric])
+                for metric in ("precision", "recall", "f1-score", "support")
+            }
+            for name in label_encoder.classes_.astype(str)
+        },
+    }
+    (output_dir / "resumo_resultados.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8",
+    )
+    print("ROC-AUC macro OvR:", f"{test_auc:.4f}")
+    print("Modelo, resumo e graficos guardados em:", output_dir)
 
 
 if __name__ == "__main__":

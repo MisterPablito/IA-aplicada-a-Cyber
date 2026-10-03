@@ -1,0 +1,83 @@
+{
+  "modelo_final": "Random Forest",
+  "macro_f1_cv": 0.9999874704690627,
+  "accuracy_teste": 1.0,
+  "macro_f1_teste": 1.0,
+  "roc_auc_ovr_macro_teste": 1.0,
+  "linhas_apos_deduplicacao": 99999,
+  "linhas_duplicadas_removidas": 1,
+  "classes": [
+    "BruteForce",
+    "DDoS",
+    "Normal",
+    "PortScan"
+  ],
+  "cv_comparison": [
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.9999874704690627,
+      "accuracy": 0.9999874996874922
+    },
+    {
+      "model": "XGBoost",
+      "macro_f1": 0.9999874704690627,
+      "accuracy": 0.9999874996874922
+    },
+    {
+      "model": "Arvore de decisao",
+      "macro_f1": 0.9999749409279284,
+      "accuracy": 0.9999749993749845
+    },
+    {
+      "model": "k-NN",
+      "macro_f1": 0.9996867671200974,
+      "accuracy": 0.9996874954685957
+    },
+    {
+      "model": "SVM linear",
+      "macro_f1": 0.9996617152272286,
+      "accuracy": 0.999662495312336
+    },
+    {
+      "model": "Regressao logistica",
+      "macro_f1": 0.9993985825654654,
+      "accuracy": 0.9993999901559394
+    },
+    {
+      "model": "Gaussian Naive Bayes",
+      "macro_f1": 0.8061648286384705,
+      "accuracy": 0.8238853096050841
+    },
+    {
+      "model": "Baseline",
+      "macro_f1": 0.10024485310817184,
+      "accuracy": 0.25076563464879736
+    }
+  ],
+  "per_class_metrics": {
+    "BruteForce": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5008.0
+    },
+    "DDoS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5016.0
+    },
+    "Normal": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4975.0
+    },
+    "PortScan": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5001.0
+    }
+  }
+}
