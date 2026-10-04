@@ -1,0 +1,23 @@
+=== PREPARACAO ===
+Dimensao original: (100000, 7)
+Linhas apos remocao de duplicados: 99999
+Treino: 79999; teste retido: 20000
+
+=== VALIDACAO CRUZADA E SELECAO ===
+Random Forest: macro-F1=1.0000; accuracy=1.0000
+XGBoost: macro-F1=1.0000; accuracy=1.0000
+Arvore de decisao: macro-F1=1.0000; accuracy=1.0000
+k-NN: macro-F1=0.9997; accuracy=0.9997
+SVM linear: macro-F1=0.9997; accuracy=0.9997
+Regressao logistica: macro-F1=0.9994; accuracy=0.9994
+Gaussian Naive Bayes: macro-F1=0.8062; accuracy=0.8239
+Baseline: macro-F1=0.1002; accuracy=0.2508
+
+=== TESTE RETIDO ===
+Modelo selecionado: Random Forest
+Accuracy: 1.0000
+Macro-F1: 1.0000
+ROC-AUC macro OvR: 1.0000
+Diferenca macro-F1 treino-teste: 0.0000
+
+Precision, recall e F1 por classe: 1.0000 para as quatro classes.
