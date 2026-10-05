@@ -48,3 +48,7 @@ O pipeline treinado esta em `../resultados/modelo_final.joblib`; as metricas est
 Os resultados perfeitos exigem cautela. No CSV, todos os registos DDoS usam `protocol=TCP` e todos os BruteForce usam `protocol=UDP`. A variavel `failed_logins` e zero em DDoS, Normal e PortScan e varia entre 3 e 10 em BruteForce; estes atributos podem revelar diretamente o rotulo.
 
 A divisao aleatoria avalia apenas registos da mesma fonte. O dataset nao inclui timestamp nem identificador de sessao para testar generalizacao temporal ou por grupos. Nao validei o modelo numa fonte independente e nao recomendo uso operacional com base nestes resultados.
+
+## Reprodutibilidade
+
+O experimento usa a semente `42`, uma divisao estratificada de 80/20 e validacao cruzada estratificada de tres folds no treino. O encoding e o scaling estao dentro dos pipelines avaliados. O teste retido so e usado depois da comparacao e do ajuste dos modelos.
