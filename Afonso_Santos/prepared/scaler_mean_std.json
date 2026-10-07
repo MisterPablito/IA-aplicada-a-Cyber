@@ -1,0 +1,14 @@
+{
+  "mean": {
+    "Packet_Size_Bytes": 649.8750857142857,
+    "Connection_Duration_ms": 100.04262857142857,
+    "Failed_Logins": 0.27434285714285717,
+    "Geo_Distance_km": 645.9218857142857
+  },
+  "std": {
+    "Packet_Size_Bytes": 1022.2157921729881,
+    "Connection_Duration_ms": 99.12613903480634,
+    "Failed_Logins": 1.1068586164161591,
+    "Geo_Distance_km": 988.4703198150671
+  }
+}
