@@ -16,4 +16,4 @@ Comparei classificadores com validacao cruzada estratificada de tres folds, usan
 | Gaussian Naive Bayes | 0,8062 | 0,8239 |
 | Baseline (classe mais frequente) | 0,1002 | 0,2508 |
 
-Random Forest, XGBoost e arvore de decisao empataram no macro-F1 medio apresentado. A escolha final e a avaliacao no conjunto de teste retido ficam para a fase de avaliacao do modelo.
+Random Forest, XGBoost e arvore de decisao empataram no macro-F1 medio apresentado. Depois do ajuste da arvore, mantive o Random Forest como candidato final pela regra de selecao implementada. A avaliacao no teste retido e as limitacoes estao em [Resultados](RESULTADOS.md).
