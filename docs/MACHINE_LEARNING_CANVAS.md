@@ -1,7 +1,7 @@
 # Machine Learning Canvas — componente individual
 
 **Responsável:** Guilherme Jesus  
-**Data de enquadramento:** 18/09/2026  
+**Data de referência do roadmap:** 18/09/2026  
 **Problema:** classificar registos de tráfego como Normal, DDoS, PortScan ou BruteForce.
 
 ## Tarefa de previsão

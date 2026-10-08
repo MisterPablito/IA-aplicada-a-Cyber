@@ -8,10 +8,11 @@ Este repositório contém a minha componente individual do dataset de tráfego. 
 
 ## Por onde começar
 
-1. Usa `docs/GUIA_SIMPLES.md` para executar o script e compreender a comparação.
-2. Consulta `docs/RESULTADOS.md` para métricas, gráficos e limitações.
-3. O planeamento e o âmbito estão em `docs/BACKLOG.md`, `docs/SPRINTS.md` e `docs/MACHINE_LEARNING_CANVAS.md`.
-4. `docs/RELATORIO_PESSOAL.md` apresenta o relatório desta componente.
+1. Abre `notebooks/IAAC_Cyber_Attacks.ipynb` para acompanhar a análise.
+2. Usa `docs/GUIA_SIMPLES.md` para executar o script e compreender a comparação.
+3. Consulta `docs/RESULTADOS.md` para métricas, gráficos e limitações.
+4. O planeamento e o âmbito estão em `docs/BACKLOG.md`, `docs/SPRINTS.md` e `docs/MACHINE_LEARNING_CANVAS.md`.
+5. `docs/RELATORIO_PESSOAL.md` apresenta o relatório desta componente; `docs/REGISTO_TRABALHO.md` regista as etapas.
 
 ## Resultado principal
 

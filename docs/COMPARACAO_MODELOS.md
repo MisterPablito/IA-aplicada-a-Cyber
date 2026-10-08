@@ -1,6 +1,7 @@
 # Comparacao inicial de modelos
 
-**Data:** 30/09/2026  
+**Data da comparação CV:** 30/09/2026  
+**Atualização da decisão:** 07/10/2026  
 **Ambito:** componente individual do dataset de ciberataques.
 
 Comparei classificadores com validacao cruzada estratificada de tres folds, usando apenas os dados de treino. O pre-processamento foi mantido dentro de cada pipeline.
