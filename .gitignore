@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.vscode/
+*.tmp
+*.log
+.env
+
+# Segredos e credenciais
+.env.*
+*.pem
+*.key
+credentials*.json
+token*.txt
+
+# Cache e testes
+.pytest_cache/
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
