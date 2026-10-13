@@ -1,4 +1,4 @@
-# Backlog individual
+# Backlog do projeto
 
 **Autor e responsável:** Nathan · **Turma:** 2ºCIB
 

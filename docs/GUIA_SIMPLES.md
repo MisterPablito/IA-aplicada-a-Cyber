@@ -1,8 +1,8 @@
-# Guia simples do trabalho individual de Nathan
+# Guia simples do projeto de Nathan
 
 **Turma:** 2ºCIB
 
-O ficheiro **IAAC_Phishing_Simples.ipynb** contém o trabalho, o código e os resultados. Este guia explica como o executar e apresentar. O notebook foi adaptado para trabalho individual e executado sem erros com o CSV real.
+O ficheiro **IAAC_Phishing_Simples.ipynb** contém o trabalho, o código e os resultados. Este guia explica como o executar e apresentar. O notebook foi executado sem erros com o CSV real.
 
 ## Primeiro perceber dataset e modelos
 
@@ -16,7 +16,7 @@ Os três modelos a destacar são:
 
 Sim, é preciso treinar os modelos, e **o código do notebook já faz isso**. Não tens de criar uma IA de raiz. Ao executar `fit`, a biblioteca aprende com os exemplos de treino. Ao executar `predict`, prevê a classe de outros exemplos. Depois as métricas comparam essas previsões com as respostas certas.
 
-Pela conversa que partilhaste, o foco atual é treinar, validar e testar pelo menos três modelos e mostrar as cinco métricas em tabelas, além dos gráficos. Essa conversa é uma orientação de um colega; não confirma que os outros mínimos do roadmap foram dispensados. Por isso, mantive-os no notebook. Criar um agente é uma possível etapa futura e não faz parte desta entrega.
+O foco desta entrega é treinar, validar e testar modelos e comparar accuracy, precision, recall, F1 e ROC-AUC em tabelas e gráficos. O notebook inclui também os restantes mínimos do roadmap.
 
 ## 1 Como abrir e executar
 
@@ -85,7 +85,7 @@ As tabelas completas no notebook incluem ainda os restantes modelos do roadmap e
 - **F1:** uma medida que combina precision e recall.
 - **ROC-AUC:** capacidade de separar as classes ao variar o limiar; quanto mais perto de 1, melhor a separação.
 
-Os dados tinham **11 054 linhas**, **30 características** e nenhum valor em falta. Depois de retirar o índice e **5 205 cópias**, ficaram **5 849 linhas**: 4 682 para treino e 1 167 para teste. Há 64 padrões com respostas contraditórias; os padrões iguais ficam juntos na divisão para evitar repetição entre treino e teste. Aqui, “grupos” significa grupos de linhas de dados, não uma equipa de alunos.
+Os dados tinham **11 054 linhas**, **30 características** e nenhum valor em falta. Depois de retirar o índice e **5 205 cópias**, ficaram **5 849 linhas**: 4 682 para treino e 1 167 para teste. Há 64 padrões com respostas contraditórias; os padrões iguais ficam juntos na divisão para evitar repetição entre treino e teste. Aqui, “grupos” significa conjuntos de linhas com as mesmas características.
 
 São dados históricos com características já calculadas. Estes resultados não garantem deteção em sites atuais, nem permitem analisar um link diretamente sem extrair as características. As bibliotecas da execução verificada incluem pandas 3.0.1, scikit-learn 1.9.1 e XGBoost 3.4.1; outra versão dos dados ou das bibliotecas pode alterar os valores. Usa os resultados da tua execução.
 
@@ -108,12 +108,12 @@ São dados históricos com características já calculadas. Estes resultados nã
 | Hyperparameter tuning | Secção 9: GridSearchCV com oito configurações |
 | Overfitting e underfitting | Secção 9: comparação de treino e validação |
 | Confusion matrix, precision, recall, F1 e ROC-AUC | Secção 10 |
-| User stories, sprints, branches e Scrum | Secção 5 deste guia: adaptação individual |
+| User stories, sprints, branches e Scrum | Secção 5 deste guia: organização do projeto |
 
 A regressão linear aparece como introdução, porque prever phishing é um problema de classificação. As variantes de regressão e outros temas sem M ficaram fora. Para os algoritmos marcados com M, incluí implementações simples, mesmo quando o roadmap só indica uma introdução.
 
 
-## 5 Organização individual sem complicar
+## 5 Organização do projeto sem complicar
 
 **Responsável por todas as tarefas: Nathan.** O backlog é a tua lista de tarefas; o sprint é um pequeno período em que escolhes algumas para concluir. Não há divisão entre pessoas.
 
@@ -128,7 +128,7 @@ A regressão linear aparece como introdução, porque prever phishing é um prob
 
 Se a organização em GitHub fizer parte da entrega, cria uma issue por tarefa, atribui-a a ti e usa os estados **Por fazer**, **Em curso** e **Concluído**. Podes criar uma branch por tarefa, como `nathan-eda` ou `nathan-modelos`, e registar commits do trabalho efetivamente realizado. Não precisas de inventar revisores nem membros de equipa.
 
-Para adaptar os registos de Scrum ao trabalho individual, usa o template da aula se tiver sido fornecido. Os modelos abaixo são registos pessoais; não representam reuniões de equipa já realizadas.
+Para os registos de Scrum, usa o template da aula se tiver sido fornecido. Os modelos abaixo são registos pessoais; não representam reuniões de equipa já realizadas.
 
 **Registo de progresso por aula — adaptação do Daily**
 
@@ -150,7 +150,7 @@ O que ficou pendente:
 Feedback recebido, se existir:
 ```
 
-**Retrospetiva individual — a cada duas aulas**
+**Retrospetiva — a cada duas aulas**
 
 ```text
 O que correu bem:
@@ -158,7 +158,7 @@ O que me dificultou o trabalho:
 Uma melhoria para o próximo sprint:
 ```
 
-Preenche apenas acontecimentos reais. As tarefas estão preparadas em `docs/BACKLOG.md` e os modelos de registo em `docs/REGISTO_INDIVIDUAL.md`. As issues, branches e registos pessoais no GitHub devem corresponder ao trabalho que efetivamente realizares.
+Preenche apenas acontecimentos reais. As tarefas estão preparadas em `docs/BACKLOG.md` e os modelos de registo em `docs/REGISTO_TRABALHO.md`. Os registos no GitHub devem corresponder ao trabalho que efetivamente realizares.
 
 ## 6 Como explicar ao professor
 
@@ -175,7 +175,7 @@ Se te perguntarem onde treinaste os modelos, mostra `cross_validate` na secção
 - [ ] Confirmar que as tabelas mostram os três modelos e as cinco métricas.
 - [ ] Conseguir explicar os gráficos e a diferença entre dataset e modelo.
 - [ ] Ler a conclusão e adaptá-la às tuas palavras e à tua execução.
-- [ ] Acrescentar os registos individuais de organização pedidos pelo professor.
+- [ ] Acrescentar os registos de trabalho de organização pedidos pelo professor.
 - [ ] Confirmar o formato e o local de entrega da aula.
 
 As referências técnicas estão no final do notebook, incluindo o [dataset do Kaggle](https://www.kaggle.com/datasets/eswarchandt/phishing-website-detector), a [documentação das métricas](https://scikit-learn.org/stable/modules/model_evaluation.html) e o [MLU Explain](https://mlu-explain.github.io/) indicado no roadmap. O código foi verificado localmente; a execução na tua conta do Colab é feita seguindo este guia.

@@ -1,4 +1,4 @@
-# Resultados do trabalho individual
+# Resultados do projeto
 
 **Autor:** Nathan · **Turma:** 2ºCIB
 
