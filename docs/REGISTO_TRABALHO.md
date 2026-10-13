@@ -1,4 +1,4 @@
-# Registo individual de trabalho
+# Registo de trabalho
 
 **Autor:** Nathan · **Turma:** 2ºCIB
 
@@ -28,7 +28,7 @@ Tarefas pendentes:
 Feedback recebido, se existir:
 ```
 
-## Retrospetiva individual
+## Retrospetiva
 
 Preencher a cada duas aulas.
 

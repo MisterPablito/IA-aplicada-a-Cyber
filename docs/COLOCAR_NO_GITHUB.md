@@ -1,8 +1,8 @@
 # Colocar o trabalho no GitHub
 
-**Projeto individual de Nathan — 2ºCIB**
+**Projeto de Nathan — 2ºCIB**
 
-Destino indicado por Nathan: [branch NathanSantos](https://github.com/MisterPablito/IA-aplicada-a-Cyber/tree/NathanSantos). O pacote está organizado para esta branch. Não foi enviado para o repositório dos colegas.
+Destino indicado por Nathan: [branch NathanSantos](https://github.com/MisterPablito/IA-aplicada-a-Cyber/tree/NathanSantos). O pacote está organizado para esta branch.
 
 ## Opção simples pelo site
 
@@ -11,7 +11,7 @@ Destino indicado por Nathan: [branch NathanSantos](https://github.com/MisterPabl
 3. Usa a opção de carregar ficheiros, habitualmente **Add file → Upload files**.
 4. Abre a pasta extraída `IAAC_Nathan_2CIB` e carrega o seu conteúdo: README, requirements e as pastas. O README deve ficar na raiz do repositório. Não carregues apenas o ZIP.
 5. Inclui também `.gitignore`, que alguns exploradores podem esconder.
-6. Confirma que o destino continua a ser **NathanSantos** e regista o commit com uma descrição como `Adicionar projeto individual de deteção de phishing`.
+6. Confirma que o destino continua a ser **NathanSantos** e regista o commit com uma descrição como `Adicionar projeto de deteção de phishing`.
 7. Confirma que o README aparece na página inicial, que o notebook abre e que as imagens do README aparecem.
 8. Guarda o link do repositório para a entrega ao professor.
 
@@ -24,4 +24,4 @@ Se já existirem ficheiros no repositório, verifica as diferenças antes de sub
 - [ ] O notebook mostra código, tabelas e gráficos.
 - [ ] Os links e as imagens funcionam.
 - [ ] Não carreguei `.venv`, credenciais ou ficheiros temporários.
-- [ ] Os registos individuais descrevem ações reais.
+- [ ] Os registos de trabalho descrevem ações reais.
