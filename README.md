@@ -61,8 +61,7 @@ IAAC_Nathan_2CIB/
 │   ├── GUIA_SIMPLES.md
 │   ├── RESULTADOS.md
 │   ├── BACKLOG.md
-│   ├── REGISTO_TRABALHO.md
-│   └── COLOCAR_NO_GITHUB.md
+│   └── REGISTO_TRABALHO.md
 └── resultados/
     ├── resumo_resultados.json
     └── graficos/
@@ -81,9 +80,6 @@ python -m venv .venv
 
 Abre o notebook no VS Code com as extensões Python e Jupyter, seleciona o Python de `.venv` e executa as células. O CSV e o resumo JSON gerados durante a execução ficam na pasta de trabalho do notebook. Não é necessário instalar Docker.
 
-## Organização do projeto
-
-O [backlog](docs/BACKLOG.md) identifica as tarefas e as evidências técnicas existentes. Os [registos de trabalho](docs/REGISTO_TRABALHO.md) devem ser preenchidos com o progresso real de Nathan. Para publicar os ficheiros, segue [Colocar no GitHub](docs/COLOCAR_NO_GITHUB.md).
 
 ## Limitações e fontes
 
