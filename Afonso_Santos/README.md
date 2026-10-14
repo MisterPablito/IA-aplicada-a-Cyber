@@ -24,10 +24,9 @@ HistGradientBoosting	0.919	0.957
 Os três ficam muito próximos. Random Forest ligeiramente à frente,
 mas a diferença é pequena.
 
-Como correr
-cd .\Afonso_Santos\
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python data_preparation.py (gera prepared/)
-python model_comparison.py (lê prepared/, gera
-prepared/model_comparison_val.csv)
+Como correr:
+1- cd .\Afonso_Santos\ (para entrar dentro da pasta da database)
+2- .\venv\Scripts\Activate.ps1 (para ativar a venv para que se possa usar o Python e as bibliotecas isoladas desse projeto específico.)
+3- pip install -r requirements.txt (para instalar as bibliotecas necessarias para o projeto funcionar)
+4- python data_preparation.py (gera prepared/)
+5- python model_comparison.py (lê prepared/, gera prepared/model_comparison_val.csv)
