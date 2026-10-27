@@ -1,0 +1,440 @@
+[
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 0.1,
+      "estimador__modelo__class_weight": null,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.1659042217621282
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 0.1,
+      "estimador__modelo__class_weight": null,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.1387149330599705,
+    "ap_cv": 0.1659042217621282
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 0.1,
+      "estimador__modelo__class_weight": null,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.0,
+    "ap_cv": 0.1659042217621282
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 0.1,
+      "estimador__modelo__class_weight": "balanced",
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16532635797012984
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 0.1,
+      "estimador__modelo__class_weight": "balanced",
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16532635797012984
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 0.1,
+      "estimador__modelo__class_weight": "balanced",
+      "limiar": 0.5
+    },
+    "f1_cv": 0.240104596604709,
+    "ap_cv": 0.16532635797012984
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 1.0,
+      "estimador__modelo__class_weight": null,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16459228202115614
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 1.0,
+      "estimador__modelo__class_weight": null,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.17840857009094185,
+    "ap_cv": 0.16459228202115614
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 1.0,
+      "estimador__modelo__class_weight": null,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.0,
+    "ap_cv": 0.16459228202115614
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 1.0,
+      "estimador__modelo__class_weight": "balanced",
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16472805890901895
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 1.0,
+      "estimador__modelo__class_weight": "balanced",
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28510375240738534,
+    "ap_cv": 0.16472805890901895
+  },
+  {
+    "familia": "logistica",
+    "parametros": {
+      "estimador__modelo__C": 1.0,
+      "estimador__modelo__class_weight": "balanced",
+      "limiar": 0.5
+    },
+    "f1_cv": 0.2368025699764813,
+    "ap_cv": 0.16472805890901895
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 1,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16852939706382714
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 1,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16852939706382714
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 1,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.2529153899789088,
+    "ap_cv": 0.16852939706382714
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 1,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16852939706382714
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 1,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16852939706382714
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 1,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.2529153899789088,
+    "ap_cv": 0.16852939706382714
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 3,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16453533966280204
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 3,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.2839517346875991,
+    "ap_cv": 0.16453533966280204
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 3,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.22564591186054955,
+    "ap_cv": 0.16453533966280204
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 3,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16760843394880345
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 3,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16760843394880345
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 3,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.21031393517156732,
+    "ap_cv": 0.16760843394880345
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 5,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16175288367111246
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 5,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28176518966853703,
+    "ap_cv": 0.16175288367111246
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 5,
+      "estimador__modelo__min_samples_leaf": 20,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.24776435207716566,
+    "ap_cv": 0.16175288367111246
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 5,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16966342952021063
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 5,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16966342952021063
+  },
+  {
+    "familia": "arvore",
+    "parametros": {
+      "estimador__modelo__max_depth": 5,
+      "estimador__modelo__min_samples_leaf": 100,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.24325460099357543,
+    "ap_cv": 0.16966342952021063
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": null,
+      "estimador__modelo__var_smoothing": 1e-09,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16151490634890142
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": null,
+      "estimador__modelo__var_smoothing": 1e-09,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.24334674262603503,
+    "ap_cv": 0.16151490634890142
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": null,
+      "estimador__modelo__var_smoothing": 1e-09,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.22929231307939762,
+    "ap_cv": 0.16151490634890142
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": null,
+      "estimador__modelo__var_smoothing": 1e-06,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.1615139799494491
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": null,
+      "estimador__modelo__var_smoothing": 1e-06,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.24334674262603503,
+    "ap_cv": 0.1615139799494491
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": null,
+      "estimador__modelo__var_smoothing": 1e-06,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.22929231307939762,
+    "ap_cv": 0.1615139799494491
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": [
+        0.5,
+        0.5
+      ],
+      "estimador__modelo__var_smoothing": 1e-09,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.16151490634890142
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": [
+        0.5,
+        0.5
+      ],
+      "estimador__modelo__var_smoothing": 1e-09,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.2602362261930018,
+    "ap_cv": 0.16151490634890142
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": [
+        0.5,
+        0.5
+      ],
+      "estimador__modelo__var_smoothing": 1e-09,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.24626042170668963,
+    "ap_cv": 0.16151490634890142
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": [
+        0.5,
+        0.5
+      ],
+      "estimador__modelo__var_smoothing": 1e-06,
+      "limiar": 0.0
+    },
+    "f1_cv": 0.28504827390530496,
+    "ap_cv": 0.1615139799494491
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": [
+        0.5,
+        0.5
+      ],
+      "estimador__modelo__var_smoothing": 1e-06,
+      "limiar": 0.2
+    },
+    "f1_cv": 0.2602362261930018,
+    "ap_cv": 0.1615139799494491
+  },
+  {
+    "familia": "naive_bayes",
+    "parametros": {
+      "estimador__modelo__priors": [
+        0.5,
+        0.5
+      ],
+      "estimador__modelo__var_smoothing": 1e-06,
+      "limiar": 0.5
+    },
+    "f1_cv": 0.24626042170668963,
+    "ap_cv": 0.1615139799494491
+  }
+]

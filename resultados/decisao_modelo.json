@@ -1,0 +1,182 @@
+{
+  "versao_protocolo": 1,
+  "sha256_dados": "6f7355d0a563822cd1c8995a2b9a0bb1f9a249b7ee388a4db25c787e5c5c0264",
+  "semente": 42,
+  "regra": "F1 CV e heurística de um erro padrão; Average Precision secundária; simplicidade em soluções elegíveis",
+  "limite_um_erro_padrao": 0.2847591480178341,
+  "selecionado": {
+    "familia": "sempre_suspeita",
+    "tipo": "referencia",
+    "parametros": {},
+    "f1_cv": 0.28504827390530496,
+    "desvio_f1_cv": 0.0007242040900966765,
+    "ap_cv": 0.16621375094161717,
+    "validacao": {
+      "accuracy": 0.16305818673883626,
+      "precision": 0.16305818673883626,
+      "recall": 1.0,
+      "f1": 0.2803955788248982,
+      "roc_auc": 0.5,
+      "average_precision": 0.16305818673883626,
+      "tn": 0,
+      "fp": 1237,
+      "fn": 0,
+      "tp": 241,
+      "registos": 1478,
+      "sem_previsoes_positivas": false
+    }
+  },
+  "melhor_aprendizagem": {
+    "familia": "logistica",
+    "tipo": "aprendizagem",
+    "parametros": {
+      "estimador__modelo__C": 1.0,
+      "estimador__modelo__class_weight": "balanced",
+      "limiar": 0.2
+    },
+    "f1_cv": 0.28510375240738534,
+    "desvio_f1_cv": 0.0007705588403814029,
+    "ap_cv": 0.16472805890901895,
+    "validacao": {
+      "accuracy": 0.16305818673883626,
+      "precision": 0.16305818673883626,
+      "recall": 1.0,
+      "f1": 0.2803955788248982,
+      "roc_auc": 0.5141706108675452,
+      "average_precision": 0.16705877454296741,
+      "tn": 0,
+      "fp": 1237,
+      "fn": 0,
+      "tp": 241,
+      "registos": 1478,
+      "sem_previsoes_positivas": false
+    }
+  },
+  "candidatos": [
+    {
+      "familia": "maioritaria",
+      "tipo": "referencia",
+      "parametros": {},
+      "f1_cv": 0.0,
+      "desvio_f1_cv": 0.0,
+      "ap_cv": 0.16621375094161717,
+      "validacao": {
+        "accuracy": 0.8369418132611637,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.5,
+        "average_precision": 0.16305818673883626,
+        "tn": 1237,
+        "fp": 0,
+        "fn": 241,
+        "tp": 0,
+        "registos": 1478,
+        "sem_previsoes_positivas": true
+      }
+    },
+    {
+      "familia": "sempre_suspeita",
+      "tipo": "referencia",
+      "parametros": {},
+      "f1_cv": 0.28504827390530496,
+      "desvio_f1_cv": 0.0007242040900966765,
+      "ap_cv": 0.16621375094161717,
+      "validacao": {
+        "accuracy": 0.16305818673883626,
+        "precision": 0.16305818673883626,
+        "recall": 1.0,
+        "f1": 0.2803955788248982,
+        "roc_auc": 0.5,
+        "average_precision": 0.16305818673883626,
+        "tn": 0,
+        "fp": 1237,
+        "fn": 0,
+        "tp": 241,
+        "registos": 1478,
+        "sem_previsoes_positivas": false
+      }
+    },
+    {
+      "familia": "logistica",
+      "tipo": "aprendizagem",
+      "parametros": {
+        "estimador__modelo__C": 1.0,
+        "estimador__modelo__class_weight": "balanced",
+        "limiar": 0.2
+      },
+      "f1_cv": 0.28510375240738534,
+      "desvio_f1_cv": 0.0007705588403814029,
+      "ap_cv": 0.16472805890901895,
+      "validacao": {
+        "accuracy": 0.16305818673883626,
+        "precision": 0.16305818673883626,
+        "recall": 1.0,
+        "f1": 0.2803955788248982,
+        "roc_auc": 0.5141706108675452,
+        "average_precision": 0.16705877454296741,
+        "tn": 0,
+        "fp": 1237,
+        "fn": 0,
+        "tp": 241,
+        "registos": 1478,
+        "sem_previsoes_positivas": false
+      }
+    },
+    {
+      "familia": "arvore",
+      "tipo": "aprendizagem",
+      "parametros": {
+        "estimador__modelo__max_depth": 5,
+        "estimador__modelo__min_samples_leaf": 100,
+        "limiar": 0.0
+      },
+      "f1_cv": 0.28504827390530496,
+      "desvio_f1_cv": 0.0007242040900966765,
+      "ap_cv": 0.16966342952021063,
+      "validacao": {
+        "accuracy": 0.16305818673883626,
+        "precision": 0.16305818673883626,
+        "recall": 1.0,
+        "f1": 0.2803955788248982,
+        "roc_auc": 0.49059932845158105,
+        "average_precision": 0.1622634774669194,
+        "tn": 0,
+        "fp": 1237,
+        "fn": 0,
+        "tp": 241,
+        "registos": 1478,
+        "sem_previsoes_positivas": false
+      }
+    },
+    {
+      "familia": "naive_bayes",
+      "tipo": "aprendizagem",
+      "parametros": {
+        "estimador__modelo__priors": null,
+        "estimador__modelo__var_smoothing": 1e-09,
+        "limiar": 0.0
+      },
+      "f1_cv": 0.28504827390530496,
+      "desvio_f1_cv": 0.0007242040900966765,
+      "ap_cv": 0.16151490634890142,
+      "validacao": {
+        "accuracy": 0.16305818673883626,
+        "precision": 0.16305818673883626,
+        "recall": 1.0,
+        "f1": 0.2803955788248982,
+        "roc_auc": 0.5060160943522174,
+        "average_precision": 0.17661977184985395,
+        "tn": 0,
+        "fp": 1237,
+        "fn": 0,
+        "tp": 241,
+        "registos": 1478,
+        "sem_previsoes_positivas": false
+      }
+    }
+  ],
+  "configuracoes_pesquisadas": 42,
+  "ajustes_cv": 210,
+  "teste_utilizado": false
+}
