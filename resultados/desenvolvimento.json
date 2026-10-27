@@ -646,5 +646,86 @@
       "registos": 1478,
       "sem_previsoes_positivas": false
     }
+  },
+  {
+    "modelo": "gradient_boosting",
+    "sha256_dados": "6f7355d0a563822cd1c8995a2b9a0bb1f9a249b7ee388a4db25c787e5c5c0264",
+    "semente": 42,
+    "cv": {
+      "f1_media": 0.0,
+      "f1_desvio": 0.0,
+      "f1_folds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "average_precision_media": 0.16428700455388223,
+      "average_precision_desvio": 0.011062801311371431,
+      "average_precision_folds": [
+        0.17133248344014262,
+        0.15027054556529812,
+        0.15433299292178626,
+        0.17199704579550523,
+        0.17350195504667898
+      ],
+      "roc_auc_media": 0.49276481305528197,
+      "roc_auc_desvio": 0.02869736930776053,
+      "roc_auc_folds": [
+        0.5160363058266785,
+        0.4577703016672553,
+        0.46619869114538626,
+        0.5185873262348417,
+        0.5052314404022479
+      ],
+      "precision_media": 0.0,
+      "precision_desvio": 0.0,
+      "precision_folds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recall_media": 0.0,
+      "recall_desvio": 0.0,
+      "recall_folds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "f1_treino_media": 0.002036204312233368
+    },
+    "treino": {
+      "accuracy": 0.833786231884058,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.6221812203709925,
+      "average_precision": 0.25721494148047197,
+      "tn": 3682,
+      "fp": 0,
+      "fn": 734,
+      "tp": 0,
+      "registos": 4416,
+      "sem_previsoes_positivas": true
+    },
+    "validacao": {
+      "accuracy": 0.8362652232746955,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5056118906335432,
+      "average_precision": 0.15808831148607308,
+      "tn": 1236,
+      "fp": 1,
+      "fn": 241,
+      "tp": 0,
+      "registos": 1478,
+      "sem_previsoes_positivas": false
+    }
   }
 ]

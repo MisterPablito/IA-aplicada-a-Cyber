@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.dummy import DummyClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
@@ -20,6 +21,7 @@ from src.dados import RAIZ, SEMENTE, SHA256, carregar_dados, dividir_dados
 from src.preparacao import criar_pipeline, obter_alvo, selecionar_entradas
 
 MODELOS = {
+    "gradient_boosting": lambda: GradientBoostingClassifier(n_estimators=100, learning_rate=0.05, max_depth=2, random_state=SEMENTE),
     "svm": lambda: SVC(C=1.0, kernel="rbf", class_weight="balanced", random_state=SEMENTE),
     "naive_bayes": lambda: GaussianNB(priors=[0.5, 0.5]),
     "knn": lambda: KNeighborsClassifier(n_neighbors=15, weights="uniform", n_jobs=1),
