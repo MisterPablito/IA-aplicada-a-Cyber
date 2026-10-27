@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.dummy import DummyClassifier
+from xgboost import XGBClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
@@ -21,6 +22,7 @@ from src.dados import RAIZ, SEMENTE, SHA256, carregar_dados, dividir_dados
 from src.preparacao import criar_pipeline, obter_alvo, selecionar_entradas
 
 MODELOS = {
+    "xgboost": lambda: XGBClassifier(n_estimators=100, max_depth=3, learning_rate=0.05, scale_pos_weight=5.0, reg_lambda=1.0, tree_method="hist", eval_metric="logloss", random_state=SEMENTE, n_jobs=1),
     "gradient_boosting": lambda: GradientBoostingClassifier(n_estimators=100, learning_rate=0.05, max_depth=2, random_state=SEMENTE),
     "svm": lambda: SVC(C=1.0, kernel="rbf", class_weight="balanced", random_state=SEMENTE),
     "naive_bayes": lambda: GaussianNB(priors=[0.5, 0.5]),
