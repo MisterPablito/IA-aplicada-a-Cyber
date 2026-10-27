@@ -49,3 +49,7 @@ Esta sequência exprime dependências técnicas. Não atribui datas letivas, dur
 **Sprint Retrospective:** data, participantes, aspetos que funcionaram, dificuldades observadas e ações acordadas. Não foram inventadas decisões ou conclusões de reuniões.
 
 O histórico de commits documenta progresso técnico. Os eventos SCRUM permanecem pendentes de realização ou de disponibilização dos seus registos reais.
+
+## Estado da entrega técnica
+
+LP-01 a LP-11 têm evidência técnica ou documental nos notebooks, testes, resultados e relatório final. LP-02 corresponde à proposta local, sem aprovação fictícia pelo grupo. A execução de LP-09 não demonstrou uma vantagem útil dos classificadores sobre a referência selecionada; LP-10 demonstra o mecanismo batch com essa limitação explícita. A conclusão técnica não marca reuniões SCRUM como realizadas nem encerra tarefas de colegas.
