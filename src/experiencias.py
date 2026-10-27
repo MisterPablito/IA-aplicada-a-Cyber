@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.dummy import DummyClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import make_scorer, precision_score
 from sklearn.model_selection import StratifiedGroupKFold, cross_validate
 
@@ -14,6 +15,7 @@ from src.dados import RAIZ, SEMENTE, SHA256, carregar_dados, dividir_dados
 from src.preparacao import criar_pipeline, obter_alvo, selecionar_entradas
 
 MODELOS = {
+    "logistica": lambda: LogisticRegression(C=1.0, max_iter=2000, class_weight="balanced", random_state=SEMENTE),
     "maioritaria": lambda: DummyClassifier(strategy="most_frequent"),
     "sempre_suspeita": lambda: DummyClassifier(strategy="constant", constant=1),
 }
