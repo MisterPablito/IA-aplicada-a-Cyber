@@ -1,0 +1,4 @@
+Timestamp,Activity_Type,Resource_Accessed,Action,Login_Attempts,File_Size
+2024-09-27 12:53:26.390859,File_Modification,/network/logs/new_project.docx,Delete,,30.66
+2024-10-01 08:00:55.017797,USB_Insert,/confidential/report1.pdf,Write,,
+2024-09-20 00:27:42.867506,File_Access,/backup/report1.pdf,Read,,10.66
