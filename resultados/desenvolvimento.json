@@ -403,5 +403,86 @@
       "registos": 1478,
       "sem_previsoes_positivas": false
     }
+  },
+  {
+    "modelo": "knn",
+    "sha256_dados": "6f7355d0a563822cd1c8995a2b9a0bb1f9a249b7ee388a4db25c787e5c5c0264",
+    "semente": 42,
+    "cv": {
+      "f1_media": 0.002666666666666667,
+      "f1_desvio": 0.00596284793999944,
+      "f1_folds": [
+        0.0,
+        0.0,
+        0.0,
+        0.013333333333333334,
+        0.0
+      ],
+      "average_precision_media": 0.1647189598992423,
+      "average_precision_desvio": 0.010605486078155507,
+      "average_precision_folds": [
+        0.1669053829818765,
+        0.15175795853136506,
+        0.16133953720921773,
+        0.16269791202638637,
+        0.1808940087473658
+      ],
+      "roc_auc_media": 0.48745311077034736,
+      "roc_auc_desvio": 0.03030160709286308,
+      "roc_auc_folds": [
+        0.4905445874001774,
+        0.4464833367409528,
+        0.48496847857189007,
+        0.4835107956225969,
+        0.5317583555161195
+      ],
+      "precision_media": 0.06666666666666667,
+      "precision_desvio": 0.14907119849998599,
+      "precision_folds": [
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.0
+      ],
+      "recall_media": 0.0013605442176870747,
+      "recall_desvio": 0.0030422693571425705,
+      "recall_folds": [
+        0.0,
+        0.0,
+        0.0,
+        0.006802721088435374,
+        0.0
+      ],
+      "f1_treino_media": 0.004038205535759853
+    },
+    "treino": {
+      "accuracy": 0.8340126811594203,
+      "precision": 0.6666666666666666,
+      "recall": 0.0027247956403269754,
+      "f1": 0.005427408412483039,
+      "roc_auc": 0.6812429419504563,
+      "average_precision": 0.25867060697235333,
+      "tn": 3681,
+      "fp": 1,
+      "fn": 732,
+      "tp": 2,
+      "registos": 4416,
+      "sem_previsoes_positivas": false
+    },
+    "validacao": {
+      "accuracy": 0.8362652232746955,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.4984033114515442,
+      "average_precision": 0.16848463785046636,
+      "tn": 1236,
+      "fp": 1,
+      "fn": 241,
+      "tp": 0,
+      "registos": 1478,
+      "sem_previsoes_positivas": false
+    }
   }
 ]

@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.dummy import DummyClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
@@ -17,6 +18,7 @@ from src.dados import RAIZ, SEMENTE, SHA256, carregar_dados, dividir_dados
 from src.preparacao import criar_pipeline, obter_alvo, selecionar_entradas
 
 MODELOS = {
+    "knn": lambda: KNeighborsClassifier(n_neighbors=15, weights="uniform", n_jobs=1),
     "random_forest": lambda: RandomForestClassifier(n_estimators=100, max_depth=8, min_samples_leaf=5, class_weight="balanced", random_state=SEMENTE, n_jobs=1),
     "arvore": lambda: DecisionTreeClassifier(max_depth=5, min_samples_leaf=20, class_weight="balanced", random_state=SEMENTE),
     "logistica": lambda: LogisticRegression(C=1.0, max_iter=2000, class_weight="balanced", random_state=SEMENTE),
