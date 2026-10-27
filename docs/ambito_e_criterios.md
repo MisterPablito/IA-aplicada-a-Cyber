@@ -48,7 +48,7 @@ O ficheiro original é [`data/raw/cybercrime_forensic_dataset.csv`](../data/raw/
 
 Os rótulos estão disponíveis no CSV histórico, mas o processo de anotação, a sua validação e o intervalo entre atividade e confirmação do resultado não estão confirmados. Não se assume que um rótulo do dataset corresponda a um incidente confirmado em ambiente real.
 
-A EDA apresenta distribuições e combinações que sugerem uma possível origem sintética dos dados. Essa interpretação é uma hipótese, não uma confirmação da proveniência. Se os dados forem sintéticos, os padrões e os rótulos podem refletir o mecanismo de geração e não o comportamento de uma rede real.
+A descrição oficial do autor no Kaggle, consultada posteriormente ao diagnóstico inicial, identifica observações simuladas; a fonte e as dúvidas remanescentes estão em [Proveniência e dicionário dos dados](dados.md). Os padrões e os rótulos podem refletir o mecanismo de geração e não o comportamento de uma rede real. A origem simulada não demonstra, por si só, que as variáveis tenham sido geradas de forma independente.
 
 As análises realizadas ainda não demonstram uma separação clara das classes pelas características admissíveis. Correlação linear ou monótona reduzida não exclui relações não lineares ou interações. A capacidade preditiva terá de ser medida por experiências comparáveis, sem prometer antecipadamente desempenho elevado.
 
