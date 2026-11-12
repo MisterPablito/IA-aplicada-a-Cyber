@@ -39,6 +39,8 @@ Precisa que prepared/train.csv e prepared/val.csv já existam — ou seja,
 correr primeiro o data_preparation.py.
 """
 
+import os
+
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
@@ -48,6 +50,8 @@ from sklearn.metrics import (
     roc_auc_score,
 )
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PREPARED_DIR = os.path.join(PROJECT_ROOT, "prepared")
 TARGET = "Is_Malicious"
 PRECISION_TARGETS = (0.5, 0.8, 0.9)  # níveis de precisão que queremos testar
 
@@ -55,8 +59,8 @@ PRECISION_TARGETS = (0.5, 0.8, 0.9)  # níveis de precisão que queremos testar
 def load_splits():
     """Lê os ficheiros já preparados (treino e validação) e separa cada um
     em X (as variáveis que o modelo usa) e y (o que queremos prever)."""
-    train = pd.read_csv("prepared/train.csv")
-    val = pd.read_csv("prepared/val.csv")
+    train = pd.read_csv(os.path.join(PREPARED_DIR, "train.csv"))
+    val = pd.read_csv(os.path.join(PREPARED_DIR, "val.csv"))
     X_train, y_train = train.drop(columns=[TARGET]), train[TARGET]
     X_val, y_val = val.drop(columns=[TARGET]), val[TARGET]
     return X_train, y_train, X_val, y_val
@@ -122,7 +126,7 @@ def main():
     print(df.to_string())
 
     # guardar também num CSV, para usar no relatório sem ter de copiar à mão
-    df.to_csv("prepared/model_comparison_val.csv")
+    df.to_csv(os.path.join(PREPARED_DIR, "model_comparison_val.csv"))
     print("\nResultados guardados em prepared/model_comparison_val.csv")
 
 

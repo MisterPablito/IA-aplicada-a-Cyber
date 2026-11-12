@@ -67,8 +67,9 @@ from sklearn.preprocessing import StandardScaler
 # à procura destes valores espalhados pelo código)
 # ---------------------------------------------------------------------------
 
-RAW_PATH = "cybersecurity_network_logs.csv"  # onde está o CSV original
-OUT_DIR = "prepared"  # pasta onde vão ficar os ficheiros já preparados
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAW_PATH = os.path.join(PROJECT_ROOT, "data", "cybersecurity_network_logs.csv")  # dataset original
+OUT_DIR = os.path.join(PROJECT_ROOT, "prepared")  # pasta onde vão ficar os ficheiros já preparados
 NUM_COLS = ["Packet_Size_Bytes", "Connection_Duration_ms", "Failed_Logins", "Geo_Distance_km"]  # as 4 colunas de números
 CAT_COL = "Protocol"  # a única coluna que é texto (categoria)
 TARGET = "Is_Malicious"  # a coluna que queremos prever (0 = normal, 1 = malicioso)
