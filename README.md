@@ -5,6 +5,14 @@ Projeto académico do CTeSP de Cibersegurança do ISTEC Porto, dedicado à class
 
 O [âmbito do projeto e os critérios de sucesso](docs/ambito_e_criterios.md) documentam o problema, a utilização prevista, o protocolo de comparação e as limitações conhecidas. Este enquadramento orienta a continuação do trabalho existente.
 
+## Navegação rápida
+
+- [Dados](data/README.md): ficheiro original, proveniência e limites de utilização.
+- [Documentação](docs/README.md): índice do enquadramento, metodologia, ambiente, requisitos e relatório.
+- [Notebooks](notebooks/): execução pedagógica por fase.
+- [Código e testes](src/) e [tests/](tests/): implementação reutilizável e verificações automatizadas.
+- [Resultados](resultados/): métricas, gráficos e decisão registada.
+
 ## Resultado principal
 
 Foram implementados oito classificadores, duas referências simples, preparação sem informação do alvo, validação cruzada por utilizador e otimização. **Não foi demonstrada uma melhoria útil sobre a regra que sinaliza todas as atividades.** A seleção e os parâmetros foram enviados no commit `c6f6558` antes da avaliação final.
