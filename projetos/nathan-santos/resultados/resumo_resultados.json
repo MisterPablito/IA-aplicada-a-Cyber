@@ -1,0 +1,195 @@
+{
+  "modelo": "Random Forest",
+  "metricas_teste": {
+    "Accuracy": 0.9622964867180805,
+    "Precision phishing": 0.9679595278246206,
+    "Recall phishing": 0.9582637729549248,
+    "F1 phishing": 0.9630872483221476,
+    "ROC AUC": 0.9946242563897576
+  },
+  "f1_validacao": 0.9511093600513948,
+  "linhas_originais": 11054,
+  "linhas_limpas": 5849,
+  "copias_removidas": 5205,
+  "conflitos": 64,
+  "treino": 4682,
+  "teste": 1167,
+  "tn": 549,
+  "fp": 19,
+  "fn": 25,
+  "tp": 574,
+  "parametros_rf": {
+    "model__class_weight": null,
+    "model__max_depth": null,
+    "model__min_samples_leaf": 1
+  },
+  "conclusao": "O objetivo foi classificar exemplos como phishing ou legítimos usando 30 características. Foram removidas 5205 cópias, ficando 5849 linhas. O modelo escolhido por F1 de validação foi Random Forest. No teste reservado com 1167 exemplos, obteve accuracy de 96.2%, precision de 96.8%, recall de 95.8%, F1 de 96.3% e AUC de 0.995. Deixou passar 25 exemplos de phishing e gerou 19 falsos alarmes. Estes resultados dizem respeito a este conjunto histórico e a esta divisão dos dados. Há características codificadas e rótulos contraditórios; o modelo não foi validado em sites atuais.",
+  "comparacao_validacao": [
+    {
+      "Modelo": "Random Forest",
+      "Accuracy": 0.9495941402892075,
+      "Precision": 0.9539235804216551,
+      "Recall": 0.9483458940228338,
+      "F1": 0.9511093600513948,
+      "ROC-AUC": 0.9909428479744431,
+      "F1 treino": 0.9888383562818023,
+      "Desvio F1": 0.003120637834878786
+    },
+    {
+      "Modelo": "Gradient Boosting",
+      "Accuracy": 0.9408374261513274,
+      "Precision": 0.9478643822058115,
+      "Recall": 0.9371863030575107,
+      "F1": 0.9424468662458286,
+      "ROC-AUC": 0.9875187154582127,
+      "F1 treino": 0.9501729401081075,
+      "Desvio F1": 0.003575720309233715
+    },
+    {
+      "Modelo": "XGBoost",
+      "Accuracy": 0.9387016321993901,
+      "Precision": 0.9461754947652198,
+      "Recall": 0.9347064508954425,
+      "F1": 0.9403414037865612,
+      "ROC-AUC": 0.9869950135601321,
+      "F1 treino": 0.9483165485055198,
+      "Desvio F1": 0.004382688564655057
+    },
+    {
+      "Modelo": "SVM",
+      "Accuracy": 0.9374195809173388,
+      "Precision": 0.948199337967835,
+      "Recall": 0.9297493089314651,
+      "F1": 0.9388690490203002,
+      "ROC-AUC": 0.9812521656531125,
+      "F1 treino": 0.9520741763333569,
+      "Desvio F1": 0.004448964274035348
+    },
+    {
+      "Modelo": "Regressão logística",
+      "Accuracy": 0.9214003734183106,
+      "Precision": 0.9304262549590216,
+      "Recall": 0.9165229182617359,
+      "F1": 0.9233536801361747,
+      "ROC-AUC": 0.9758535337914039,
+      "F1 treino": 0.9244639125447268,
+      "Desvio F1": 0.006538348476746052
+    },
+    {
+      "Modelo": "KNN",
+      "Accuracy": 0.9192660851853677,
+      "Precision": 0.9153601974190457,
+      "Recall": 0.9297534087077198,
+      "F1": 0.9224859815228577,
+      "ROC-AUC": 0.9717262074072838,
+      "F1 treino": 0.948381295478232,
+      "Desvio F1": 0.006838399397101106
+    },
+    {
+      "Modelo": "Árvore de decisão",
+      "Accuracy": 0.9077310457355301,
+      "Precision": 0.9326904873761581,
+      "Recall": 0.8867600800686303,
+      "F1": 0.9084160522750482,
+      "ROC-AUC": 0.9694051576859994,
+      "F1 treino": 0.9139452938130187,
+      "Desvio F1": 0.006204545633182647
+    },
+    {
+      "Modelo": "Naive Bayes",
+      "Accuracy": 0.6542072526377459,
+      "Precision": 0.5992084098723565,
+      "Recall": 0.9995869475423378,
+      "F1": 0.7492646636683419,
+      "ROC-AUC": 0.9665108532835772,
+      "F1 treino": 0.7494450542315874,
+      "Desvio F1": 0.0006722587744483401
+    },
+    {
+      "Modelo": "Dummy",
+      "Accuracy": 0.5168730870524593,
+      "Precision": 0.5168730870524593,
+      "Recall": 1.0,
+      "F1": 0.681498118998119,
+      "ROC-AUC": 0.5,
+      "F1 treino": 0.6814981569021493,
+      "Desvio F1": 0.00012688159993074646
+    }
+  ],
+  "comparacao_teste": [
+    {
+      "Modelo": "Dummy",
+      "Accuracy": 0.5132819194515853,
+      "Precision": 0.5132819194515853,
+      "Recall": 1.0,
+      "F1": 0.6783691959229898,
+      "ROC-AUC": 0.5
+    },
+    {
+      "Modelo": "Regressão logística",
+      "Accuracy": 0.9160239931448158,
+      "Precision": 0.9252971137521222,
+      "Recall": 0.9098497495826378,
+      "F1": 0.9175084175084175,
+      "ROC-AUC": 0.9775417950104635
+    },
+    {
+      "Modelo": "Árvore de decisão",
+      "Accuracy": 0.9237360754070265,
+      "Precision": 0.9278523489932886,
+      "Recall": 0.9232053422370617,
+      "F1": 0.9255230125523013,
+      "ROC-AUC": 0.9792362270450752
+    },
+    {
+      "Modelo": "KNN",
+      "Accuracy": 0.9288774635818338,
+      "Precision": 0.9215686274509803,
+      "Recall": 0.9415692821368948,
+      "F1": 0.9314616019818331,
+      "ROC-AUC": 0.9792803146088551
+    },
+    {
+      "Modelo": "Naive Bayes",
+      "Accuracy": 0.6443873179091688,
+      "Precision": 0.5907297830374754,
+      "Recall": 1.0,
+      "F1": 0.7427154370737755,
+      "ROC-AUC": 0.9711138282113382
+    },
+    {
+      "Modelo": "SVM",
+      "Accuracy": 0.9383033419023136,
+      "Precision": 0.9519725557461407,
+      "Recall": 0.9265442404006677,
+      "F1": 0.9390862944162437,
+      "ROC-AUC": 0.9859125537868277
+    },
+    {
+      "Modelo": "Gradient Boosting",
+      "Accuracy": 0.9537275064267352,
+      "Precision": 0.961082910321489,
+      "Recall": 0.9482470784641068,
+      "F1": 0.9546218487394958,
+      "ROC-AUC": 0.9915293094124009
+    },
+    {
+      "Modelo": "XGBoost",
+      "Accuracy": 0.9554413024850043,
+      "Precision": 0.9612141652613828,
+      "Recall": 0.9515859766277128,
+      "F1": 0.9563758389261745,
+      "ROC-AUC": 0.9918702532389664
+    },
+    {
+      "Modelo": "Random Forest",
+      "Accuracy": 0.9622964867180805,
+      "Precision": 0.9679595278246206,
+      "Recall": 0.9582637729549248,
+      "F1": 0.9630872483221476,
+      "ROC-AUC": 0.9946242563897576
+    }
+  ],
+  "autor": "Nathan",
+  "turma": "2ºCIB"
+}
