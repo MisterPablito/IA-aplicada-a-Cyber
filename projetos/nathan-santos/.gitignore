@@ -1,0 +1,16 @@
+# Ambientes e ficheiros temporários
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+
+# Downloads e resumos criados durante uma nova execução
+**/phishing.csv
+**/phishing.txt
+**/resumo_resultados.json
+!resultados/resumo_resultados.json
