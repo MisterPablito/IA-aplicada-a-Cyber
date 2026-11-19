@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#ffffff"/>
+<style>text{font-family:Arial,sans-serif;fill:#183044}.title{font-size:25px;font-weight:bold}.sub{font-size:15px;fill:#42596b}.label{font-size:14px}.small{font-size:12px;fill:#42596b}.axis{stroke:#8ca0af;stroke-width:1}.bar{fill:#3977a8}.tcp{fill:#247ba0}.udp{fill:#f4a261}.box{fill:#9bc1bc;stroke:#215b63;stroke-width:2}</style>
+<text x="40" y="42" class="title">EDA — equilíbrio das classes e padrões do dataset</text>
+<text x="40" y="67" class="sub">100.000 registos | 6 atributos + attack_type | 1 duplicado removido na versão atual do script</text>
+<!-- class counts -->
+<text x="55" y="122" class="title" style="font-size:19px">1. Distribuição das classes</text>
+<line x1="220" y1="155" x2="220" y2="380" class="axis"/><line x1="220" y1="380" x2="690" y2="380" class="axis"/>
+<text x="55" y="183" class="label">DDoS</text><rect x="220" y="165" width="444" height="27" rx="3" class="bar"/><text x="674" y="184" class="label">25.077 (25,08%)</text>
+<text x="55" y="233" class="label">BruteForce</text><rect x="220" y="215" width="443" height="27" rx="3" class="bar"/><text x="674" y="234" class="label">25.039 (25,04%)</text>
+<text x="55" y="283" class="label">PortScan</text><rect x="220" y="265" width="442" height="27" rx="3" class="bar"/><text x="674" y="284" class="label">25.008 (25,01%)</text>
+<text x="55" y="333" class="label">Normal</text><rect x="220" y="315" width="440" height="27" rx="3" class="bar"/><text x="674" y="334" class="label">24.876 (24,88%)</text>
+<text x="220" y="405" class="small">As classes estão praticamente equilibradas; não foi usada reamostragem.</text>
+<!-- protocol distribution -->
+<text x="55" y="465" class="title" style="font-size:19px">2. Protocolo por classe</text>
+<text x="220" y="500" class="small">TCP</text><text x="340" y="500" class="small">UDP</text>
+<text x="55" y="535" class="label">DDoS</text><rect x="220" y="515" width="120" height="24" class="tcp"/><rect x="340" y="515" width="0" height="24" class="udp"/><text x="474" y="533" class="label">100% TCP</text>
+<text x="55" y="570" class="label">BruteForce</text><rect x="220" y="550" width="0" height="24" class="tcp"/><rect x="220" y="550" width="120" height="24" class="udp"/><text x="474" y="568" class="label">100% UDP</text>
+<text x="55" y="605" class="label">Normal</text><rect x="220" y="585" width="60.5" height="24" class="tcp"/><rect x="280.5" y="585" width="59.5" height="24" class="udp"/><text x="474" y="603" class="label">50,4% TCP / 49,6% UDP</text>
+<text x="55" y="640" class="label">PortScan</text><rect x="220" y="620" width="60.3" height="24" class="tcp"/><rect x="280.3" y="620" width="59.7" height="24" class="udp"/><text x="474" y="638" class="label">50,3% TCP / 49,7% UDP</text>
+<text x="55" y="680" class="small">A associação perfeita de protocol com DDoS/BruteForce pode facilitar artificialmente a classificação.</text>
+<!-- failed logins summary -->
+<text x="755" y="122" class="title" style="font-size:19px">3. failed_logins por classe</text>
+<line x1="795" y1="355" x2="1145" y2="355" class="axis"/><line x1="795" y1="165" x2="795" y2="355" class="axis"/>
+<text x="774" y="360" class="small">0</text><text x="774" y="266" class="small">5</text><text x="767" y="171" class="small">10</text>
+<line x1="840" y1="355" x2="840" y2="355" stroke="#215b63" stroke-width="3"/><circle cx="840" cy="355" r="5" fill="#215b63"/>
+<line x1="920" y1="355" x2="920" y2="355" stroke="#215b63" stroke-width="3"/><circle cx="920" cy="355" r="5" fill="#215b63"/>
+<line x1="1000" y1="355" x2="1000" y2="355" stroke="#215b63" stroke-width="3"/><circle cx="1000" cy="355" r="5" fill="#215b63"/>
+<line x1="1080" y1="165" x2="1080" y2="298" stroke="#215b63" stroke-width="2"/><rect x="1060" y="184" width="40" height="76" class="box"/><line x1="1060" y1="222" x2="1100" y2="222" stroke="#215b63" stroke-width="3"/><line x1="1070" y1="165" x2="1090" y2="165" stroke="#215b63" stroke-width="2"/><line x1="1070" y1="298" x2="1090" y2="298" stroke="#215b63" stroke-width="2"/>
+<text x="813" y="382" class="small">DDoS</text><text x="885" y="382" class="small">Normal</text><text x="958" y="382" class="small">PortScan</text><text x="1047" y="382" class="small">BruteForce</text>
+<text x="825" y="420" class="small">DDoS, Normal e PortScan: sempre 0.</text><text x="825" y="440" class="small">BruteForce: mínimo 3, Q1=5, mediana=7,</text><text x="825" y="460" class="small">Q3=9, máximo 10.</text>
+<rect x="755" y="520" width="390" height="110" rx="8" fill="#fff5e8" stroke="#e8b66b"/>
+<text x="775" y="550" class="label" style="font-weight:bold">Interpretação com cautela</text>
+<text x="775" y="578" class="small">Protocol e failed_logins carregam sinais diretos</text>
+<text x="775" y="598" class="small">dos rótulos. As métricas quase perfeitas no split</text>
+<text x="775" y="618" class="small">aleatório não provam generalização para tráfego real.</text>
+<text x="40" y="735" class="small">Fonte: cyber_attack_dataset_100000.csv. Pearson e Spearman apresentados no relatório; valores de classe calculados sobre os dados fornecidos.</text>
+</svg>
