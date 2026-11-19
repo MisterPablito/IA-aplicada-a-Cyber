@@ -1,0 +1,54 @@
+{
+  "commit_decisao": "c6f6558ec207a15b0c7288666aeb89a937f69b2b",
+  "assinatura_decisao": "b2efea375b6887918f044fbfccb69e01f2e5bf098d0264913ccae148fd90cb36",
+  "sha256_dados": "6f7355d0a563822cd1c8995a2b9a0bb1f9a249b7ee388a4db25c787e5c5c0264",
+  "modelo_selecionado": "sempre_suspeita",
+  "registos_desenvolvimento": 5894,
+  "registos_teste": 1506,
+  "utilizadores_teste": 1007,
+  "metricas": {
+    "maioritaria": {
+      "accuracy": 0.8286852589641435,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.17131474103585656,
+      "tn": 1248,
+      "fp": 0,
+      "fn": 258,
+      "tp": 0,
+      "registos": 1506,
+      "sem_previsoes_positivas": true
+    },
+    "sempre_suspeita": {
+      "accuracy": 0.17131474103585656,
+      "precision": 0.17131474103585656,
+      "recall": 1.0,
+      "f1": 0.2925170068027211,
+      "roc_auc": 0.5,
+      "average_precision": 0.17131474103585656,
+      "tn": 0,
+      "fp": 1248,
+      "fn": 0,
+      "tp": 258,
+      "registos": 1506,
+      "sem_previsoes_positivas": false
+    },
+    "logistica_otimizada": {
+      "accuracy": 0.17131474103585656,
+      "precision": 0.17131474103585656,
+      "recall": 1.0,
+      "f1": 0.2925170068027211,
+      "roc_auc": 0.5177928095806004,
+      "average_precision": 0.17917944638407857,
+      "tn": 0,
+      "fp": 1248,
+      "fn": 0,
+      "tp": 258,
+      "registos": 1506,
+      "sem_previsoes_positivas": false
+    }
+  },
+  "uso_operacional_recomendado": false
+}
